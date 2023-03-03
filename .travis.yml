@@ -8,14 +8,14 @@ beofore_install:
 script:
   - docker run -e CI=true marcochen/docker-react npm run test -- --coverage
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-west-2"
-  app: "docker-react"
-  env: "Dockerreact-env"
-  bucket_name: "elasticbeanstalk-us-west-2-339095549379"
-  bucket_path: "docker-react"
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: "$AWS_SECRET_KEY"
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "us-west-2"
+#   app: "docker-react"
+#   env: "Dockerreact-env"
+#   bucket_name: "elasticbeanstalk-us-west-2-339095549379"
+#   bucket_path: "docker-react"
+#   on:
+#     branch: master
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key: "$AWS_SECRET_KEY"
